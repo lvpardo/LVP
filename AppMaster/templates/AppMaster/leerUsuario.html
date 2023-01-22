@@ -1,0 +1,26 @@
+{% extends "AppMaster/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h2>Usuario {{ usuarios.username }} fue modificado correctamente!!</h2>
+
+<br>
+<p> Username: {{ usuarios.username }} <br> </p>
+<p> Nombre: {{ usuarios.name }} <br> </p>   
+<p> Apellido: {{ usuarios.lastname }}  <br> </p>
+<p> Email: {{ usuarios.email }}  <br> </p>
+    <br>
+    <a class="btn btn-primary" href="{% url 'listarusuarios' %}">Volver</a>
+    <br>
+    <br>
+
+    </ul>
+<h3>{{ mensaje }}</h3>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+
+{% endblock %}

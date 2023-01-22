@@ -1,0 +1,36 @@
+{% extends "AppMaster/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Usuario</h1>
+
+{% if user %}
+<div class="POST">
+
+    <h3>{{ mensaje }}</h3>
+
+        <br>
+       <p> ID: {{ user.id }} <br> </p>
+       <p> Username: {{ user.username }} <br> </p>
+       <p> Nombre: {{ user.name }} <br> </p>   
+       <p> Apellido: {{ user.lastname }}  <br> </p>
+       <p> Email: {{ user.email }}  <br> </p>
+        <p>---------------------------------------------------------</p>
+        <br>   
+    <a class="btn btn-danger" href="{% url 'eliminarUsuario' user.id %}">Borrar</a>
+    <a class="btn btn-primary" href="{% url 'listarusuarios' %}">Volver</a>  
+
+</div>
+
+{% else %}
+<h3> Error, no hay User</h3>
+{% endif %}
+
+
+
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+{% endblock %}

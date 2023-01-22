@@ -1,0 +1,29 @@
+{% extends "AppMaster/padre.html" %}
+
+{% load static %}
+
+
+{% block titulo %}
+{% if user.is_authenticated %}
+    
+    <img height="90px" src= '/media/{{ user.profile.avatar }}' alt=""><br>
+
+    <h2> Usuario: {{ user.username }}</h2><br>
+
+    <nav class="navbar navbar-light">
+        <a class="btn btn-primary" href="{% url 'register' %}">Registracion</a>
+        <a class="btn btn-primary" href="{% url 'buscar' %}">Buscar</a>
+        <a class="btn btn-primary" href="{% url 'listarusuarios' %}">Listar</a>
+        <a class="btn btn-primary" href="{% url 'profile_edit' %}">Editar Profile</a>    
+    </nav>
+
+{% else %}
+    <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+{% endif %} 
+
+{% endblock %}
+
+
+{% block contenido_que_cambia %}
+
+{% endblock %}
