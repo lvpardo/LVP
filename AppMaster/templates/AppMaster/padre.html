@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Proyecto-Juan Granata</title>
+        <title>Proyecto Final</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -21,20 +21,20 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="btn btn-primary" href="{% url 'inicio' %}">Pagina Principal</a>
+                <a class="btn btn-primary" href="{% url 'inicio' %}">HOMEPAGE</a>
 
-                <a class="btn btn-primary" href="{% url 'post_list' %}">Posteo</a>
-                <a class="btn btn-primary" href="{% url 'aboutme' %}">Acerca de</a>
-                <a class="btn btn-primary" href="{% url 'all_messages' %}">Mensajes</a>
+                <a class="btn btn-primary" href="{% url 'post_list' %}">POST</a>
+                <a class="btn btn-primary" href="{% url 'aboutme' %}">ABOUT ME</a>
+                <a class="btn btn-primary" href="{% url 'all_messages' %}">MENSAJES</a>
                 {% if request.user.is_authenticated %}
                 <h2> Hola {{ user.get_username }}</h2>
                 <img height="50px" src= '/media/{{ user.profile.avatar }}' alt="">
 
-                <a class="btn btn-primary" href="{% url 'usuario' %}">Perfil</a>
-                <a class="btn btn-danger" href="{% url 'logout' %}">Desloguearme</a>
+                <a class="btn btn-primary" href="{% url 'usuario' %}">PROFILE</a>
+                <a class="btn btn-danger" href="{% url 'logout' %}">LOGOUT</a>
                 {% else %}
-                <a class="btn btn-primary" href="{% url 'register' %}">Registrarse</a>
-                <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+                <a class="btn btn-primary" href="{% url 'register' %}">REGISTER</a>
+                <a class="btn btn-primary" href="{% url 'login' %}">LOGIN</a>
                 {% endif %}                
                 
                

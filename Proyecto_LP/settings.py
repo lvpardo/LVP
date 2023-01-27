@@ -52,7 +52,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "Proyecto_JG.urls"
+ROOT_URLCONF = "Proyecto_LP.urls"
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "Proyecto_JG.wsgi.application"
+WSGI_APPLICATION = "Proyecto_LP.wsgi.application"
 
 
 # Database
