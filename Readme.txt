@@ -34,6 +34,7 @@ Podremos "Leer" o "Borrar" cada uno de los Post asi como tambien crear un nuevo 
 Esta Pâgina tambien cuenta con la opcion de "Volver a Inicio" la cual nos regresara al Homepage. 
 
 
+
 El modulo de Mensajes cuenta con una bandeja de entrada en la que se podran observar todos los mensajes y tiene la opcion e Escribir un nuevo mensaje. 
 
 Si seleccionamos un mensaje en particular la aplicacion lo marcara automaticamente como leido y nos derivara a una nueva pagina que nos ofrecera la opcion de responderlo. 
@@ -53,6 +54,7 @@ Si seleccionamos la opcion Buscar se nos solicitara un nombre de usuario que al 
 La opcion Listar nos mostrara todos los usuarios creados en la base y nos ofresera la opcion de Borrarlos en caso deseado. 
 
 Y finalmente la opcion Editar Profile nos permitira agregar una Bio del usuario, seleccionar un Avatar e incluir un sitio Web. 
+
 
 
 En cuanto a la navegacion en general cabe mencionar que una vez logueado el nombre del usuario aparecera en la barra superior con su correspondiente avatar (en casa de que se haya incluido en el Profile). 
