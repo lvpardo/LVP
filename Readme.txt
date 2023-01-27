@@ -15,7 +15,6 @@ Se trata de una Web tipo blog realizada utilizando el framework de Django como p
 
 ===============================================
 
-
 * Instrucciones de uso:
 
 
