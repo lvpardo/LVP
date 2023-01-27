@@ -1,55 +1,63 @@
-﻿ENTREGA DEL PROYECTO FINAL
-Se debe entregar:
-✔	Se deberá realizar de forma individual, crearás una aplicación web estilo blog programada en Python en Django. Esta web tendrá administrador, perfiles, registros, páginas y formularios.
-✔	La entrega se realizará enviando el link a GitHub, en el readme de GitHub deberá estar el nombre completo del estudiante y una descripción de dos o tres renglones contando qué hizo. 
-✔	En el GitHub debe haber un video o link a vídeo donde el estudiante muestra su web funcionando en no más de diez minutos. 
-Dentro del GitHub deberá existir una carpeta con por lo menos 3 casos de pruebas debidamente documentados.
+﻿###############################################
+###############################################
+########   Proyecto Final Blog-coder ##########
+###############################################
+###############################################
 
-Consigna: Se tiene que crear una Web semejante a un Blog, dicha web deberá contar con usuarios y permisos para ellos. La web deberá contar con:
-✔	Contar con algún acceso visible a la vista de "Acerca de mí" donde se contará acerca de los dueños de la página manejada en el route about/.  (En castellano un acerca de mí que hable un poco de los creadores de la web y del proyecto).
-✔	Contar con algún acceso visible a la vista de blogs que debe alojarse en el route pages/. (Es decir un html que permite listar todos los blogs de la BD, con una información mínima de dicho blog)
-✔	Acceder a una pantalla que contendrá las páginas. Al clickear en “Leer más” debe navegar al detalle de la page mediante un route pages/<pageId>. (Al hacer clic se ven más detalle de lo que se veía en el apartado anterior) 
-✔	Si no existe ninguna página mostrar un "No hay páginas aún". (Aclarando, si en la página hacemos clic en algún lugar que no existe que diga eso, o que lleve a un html con esos mensaje, no dejar botones que no responden)
-✔	Para crear, editar o borrar las fotos debes estar registrado como Administrador.
-✔	Cada blog, es decir cada model Blog debe tener como mínimo, un título, subtítulo, cuerpo, autor, fecha y una imagen (mínimo y obligatorio, puede tener más).
-✔	Piezas sugeridas, no hace falta que estén todas, pero tiene que haber por lo menos un CRUD completo y el módulo de Login debe ser sólido:
+     Autor: Luciano Pardo - Comision: 34640 
 
---------------------------------------------------------------------------------------------------------
-Esta version ya tiene funcionando el modulo de Usuarios (creacion, busqueda, edicion, listar y borrar), el modulo de posteos donde 
-se puede crear, listar y borrar), tambien esta en funcionamiento el modulo de mensajeria, en el cual con una bandeja de mensajes donde se listan los mensajes enviados y recibidos.
-Todas las funciones principales se pueden utilizar con un usuario registra.
-Cada Usuario tiene la opcion de editar su perfil, en el cual tiene un campo de biografia, puede adjuntar una foto (avatar) y cargar su pagina web.
+===============================================
 
-Video en youtube:
-https://youtu.be/NWlMZHKICcI
+* Instrucciones de uso:
 
-Descipcion de cada Vista:
-Antes de correr las pruebas hay que asegurarse que estamos logueados al portal.
+Se trata de una web tipo blog realizada utilizando el framework de Django como proyecto final del curso de Python en CoderHouse.
 
-- Modulo Posteo:
-    1- Este modulo puede ser accedido sin necesidad de estar logueado. 
-    2- Selecionar el boton y nos despliega el listados de posteos cargados en el portal y las opciones para cada uno.
-    3- Si elegimos la opcion "leer", nos muestra el detalle del posteos. Si elegimos la opcion "borrar" nos borra el posteo. Si eliges la opcion "crear nuevo posteo" te permite 
-    cargar uno nuevo. La opcion "volver" regresa a la pagina de inicio.
-    4- Las opciones "crear nuevo post" y "borrar" solo son visualizadas por los ususarios logueados.
+  1. Clonar el proyecto
 
-- Modulo Mensajes:
-    1- Este modulo solo puede ser accedido por los usuario logueados.
-    2- Al ingresar se muestra una bandeja de mensajes, donde se listan los mensajes enviado y recibidos.
-    2- Clickeando directamente sobre el mensaje nos da la opcion de "responder" el mensaje si estamos en la bandeja de Entrada.
-    Si estamos en la bandeja de Salida nos pemite leer en detalle el mensaje enviado.
-    3- Cuando ingresamos al mensaje recibido, automaticamente se cambia un registo que indica que el mensaje ya fue leido.
+  2. Crear las migraciones ejecutando <python manage.py makemigrations> y luego <python manage.py migrate>
 
-- Modulo Perfil:
-    1- Aca permite al usuario registrar un nuevo usuario, buscar un usuario especifico, listar los usuarios y editar su perfil (bio, avatar y pagina web).
-    2- En la opcion "editar profile" nos da la opcion de cargar nuestra biografia, subir un avatar y poner nuestra pagina web.
-    3- Una vez seleccionado salvado los cambios nos despliega la informacion y nos vuleve a dar la opcion de editar nuevamente el profile o de volver
-    al menu de perfil.
+  3. Iniciar la aplicación con <python manage.py runserver>
 
-- Modulo Acerca de:
-    1- Eneste modulo hago una breve resenia de mi persona.
+Una vez inicializada la aplicación, el usuario tendra disponible la URL de Inicio y podra navegar dentro de las distintas páginas disponibles 
+
+===============================================
+
+* Modulos y Especificaciones: 
 
 
-Base de Datos SQLite
-    superuser: jgranata
-    password: jgranata
+Este Portal cuenta con cuatro Modulos: Posts, About Me, Mensajes y Profile. 
+
+El modulo Posts se puede acceder sin la necesidad de estar logueado. Una vez seleccionada esta opcion nos llevara a la pagina que muestra el listado de los Posts cargados en el Portal. 
+
+Podremos "Leer" o "Borrar" cada uno de los Post asi como tambien crear un nuevo Post en caso de que se desee. 
+
+Esta Pâgina tambien cuenta con la opcion de "Volver a Inicio" la cual nos regresara al Homepage. 
+
+
+El modulo de Mensajes cuenta con una bandeja de entrada en la que se podran observar todos los mensajes y tiene la opcion e Escribir un nuevo mensaje. 
+
+Si seleccionamos un mensaje en particular la aplicacion lo marcara automaticamente como leido y nos derivara a una nueva pagina que nos ofrecera la opcion de responderlo. 
+
+En cambio cuando ingresamos a los mensajes enviados solo tendremos la opcion de leerlos. 
+
+Cabe destacar que este modulo puede accederse unicamente estando Logueado en el sistema. 
+
+
+
+El modulo Perfil cuenta con cuatro opciones: Registracion, Buscar, Listar y editar Profile. 
+
+Seleccionando la Opcion de Registracion podremos crear un nuevo usuario ingresando: Username, Email y Contraseña. 
+
+Si seleccionamos la opcion Buscar se nos solicitara un nombre de usuario que al ser ingresado nos devolvera su username y Email. 
+
+La opcion Listar nos mostrara todos los usuarios creados en la base y nos ofresera la opcion de Borrarlos en caso deseado. 
+
+Y finalmente la opcion Editar Profile nos permitira agregar una Bio del usuario, seleccionar un Avatar e incluir un sitio Web. 
+
+
+En cuanto a la navegacion en general cabe mencionar que una vez logueado el nombre del usuario aparecera en la barra superior con su correspondiente avatar (en casa de que se haya incluido en el Profile). 
+
+Tambien se incluyo un Icpno con la opcion de LOGOUT la cual una vez seleccionada cerrara la sesion del usuario logueado. 
+
+===============================================
+
