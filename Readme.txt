@@ -63,6 +63,6 @@ Y por último si seleccionamos la opción Editar Profile nos permitirá agregar 
 
 En cuanto a la navegación en general cabe mencionar que una vez logueado el nombre del usuario aparecerá en la barra superior con su correspondiente avatar (en caso de que se haya incluido en el Profile). 
 
-también se incluyó un Icono con la opción de LOGOUT la cual una vez seleccionada cerrara la sesión del usuario logueado. 
+También se incluyó un Icono con la opción de LOGOUT la cual una vez seleccionada cerrara la sesión del usuario logueado. 
 
 ===============================================
